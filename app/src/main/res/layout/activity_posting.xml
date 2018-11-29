@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PostingActivity">
+
+        <ImageView
+            android:id="@+id/gambar_tempat_posting"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/icon_camera"
+            app:layout_constraintBottom_toTopOf="@+id/nama"
+            app:layout_constraintEnd_toEndOf="@+id/gambar_tempat_posting"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/gambar_tempat_posting"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama tempat"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/gambar_tempat_posting"
+            app:layout_constraintLeft_toLeftOf="@+id/gambar_tempat_posting"
+            app:layout_constraintRight_toRightOf="@+id/gambar_tempat_posting"/>
+
+        <EditText
+            android:id="@+id/nama_tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/nama"
+            app:layout_constraintLeft_toLeftOf="@+id/nama"
+            app:layout_constraintRight_toRightOf="@+id/nama"/>
+
+        <TextView
+            android:id="@+id/alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat tempat"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/nama_tempat"
+            app:layout_constraintLeft_toLeftOf="@+id/nama_tempat"
+            app:layout_constraintRight_toRightOf="@+id/nama_tempat"/>
+
+        <EditText
+            android:id="@+id/alamat_tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/alamat"
+            app:layout_constraintLeft_toLeftOf="@+id/alamat"
+            app:layout_constraintRight_toRightOf="@+id/alamat"/>
+
+        <TextView
+            android:id="@+id/harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harga tempat"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/alamat_tempat"
+            app:layout_constraintLeft_toLeftOf="@+id/alamat_tempat"
+            app:layout_constraintRight_toRightOf="@+id/alamat_tempat"/>
+
+        <EditText
+            android:id="@+id/harga_tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@+id/harga"
+            app:layout_constraintLeft_toLeftOf="@+id/harga"
+            app:layout_constraintRight_toRightOf="@+id/harga"/>
+
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi tempat"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/harga_tempat"
+            app:layout_constraintLeft_toLeftOf="@+id/harga_tempat"
+            app:layout_constraintRight_toRightOf="@+id/harga_tempat"/>
+
+        <EditText
+            android:id="@+id/deskripsi_tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:inputType="textMultiLine"
+            app:layout_constraintTop_toBottomOf="@+id/deskripsi"
+            app:layout_constraintLeft_toLeftOf="@+id/deskripsi"
+            app:layout_constraintRight_toRightOf="@+id/deskripsi"/>
+
+
+        <Button
+            android:id="@+id/posting_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_margin="@dimen/margin_8"
+            android:text="Posting"
+            android:textColor="@color/md_white_1000"
+            app:layout_constraintTop_toBottomOf="@+id/deskripsi_tempat"
+            app:layout_constraintLeft_toLeftOf="@+id/deskripsi_tempat"
+            app:layout_constraintRight_toRightOf="@+id/deskripsi_tempat"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

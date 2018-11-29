@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "90297102721",
+    "firebase_url": "https://kos-dan-kontrakan.firebaseio.com",
+    "project_id": "kos-dan-kontrakan",
+    "storage_bucket": "kos-dan-kontrakan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90297102721:android:5e1984606fdf886d",
+        "android_client_info": {
+          "package_name": "id.developer.arrif.kosdankontrakan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90297102721-ljgk532g63ds9r6equeej1nai4bbb8e2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg70pR3Wbmy1ofD8AGNnPZ2gMiaoA6vPg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
