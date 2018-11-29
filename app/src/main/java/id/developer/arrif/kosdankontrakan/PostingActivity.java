@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,6 +64,7 @@ public class PostingActivity extends AppCompatActivity {
 
         id = FirebaseDatabase.getInstance().getReference("posting")
                 .push().getKey();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         gambarTempat.setClickable(true);
         gambarTempat.setOnClickListener(new View.OnClickListener() {
@@ -172,6 +174,8 @@ public class PostingActivity extends AppCompatActivity {
         databaseReference.child(id)
                 .child("imageUrl").setValue(imageUrl);
         databaseReference.child(id)
+                .child("isBooking").setValue("false");
+        databaseReference.child(id)
                 .child("posting_data")
                 .setValue(data())
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -182,5 +186,15 @@ public class PostingActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

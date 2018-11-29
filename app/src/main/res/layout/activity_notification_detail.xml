@@ -1,9 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".NotificationDetail">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/nama_tempat_notif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dari : Anonim"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:maxLength="50"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/alamat_tempat_notif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dari : Anonim"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:maxLength="50"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/harga_tempat_notif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dari : Anonim"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:maxLength="50"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/deskripsi_tempat_notif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dari : Anonim"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:maxLength="50"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/terima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terima"
+        android:textColor="@color/md_white_1000"
+        android:background="@color/md_green_A700"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8" />
+
+    <Button
+        android:id="@+id/tolak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tolak"
+        android:textColor="@color/md_white_1000"
+        android:background="@color/md_red_700"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8" />
+
+</LinearLayout>

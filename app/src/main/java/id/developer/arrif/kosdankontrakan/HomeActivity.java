@@ -66,7 +66,7 @@ public class HomeActivity extends AppCompatActivity implements PostingAdapter.Da
 
         postingArrayList = new ArrayList<>();
         postingAdapter = new PostingAdapter(getApplicationContext(),this);
-        postingArrayList.clear();
+        //postingArrayList.clear();
 
         getData();
         //add Adapter to RecyclerView
@@ -81,15 +81,17 @@ public class HomeActivity extends AppCompatActivity implements PostingAdapter.Da
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postingArrayList.clear();
+                Posting posting = new Posting();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     //Mapping data pada DataSnapshot ke dalam objek mahasiswa
+
                     String imageUrl = snapshot.child("imageUrl").getValue(String.class);
-                    Posting posting = snapshot
+                    posting = snapshot
                             .child("posting_data")
                             .getValue(Posting.class);
 
-                    posting.setKey(snapshot.getKey());
                     posting.setImageUrl(imageUrl);
+                    posting.setKey(snapshot.getKey());
                     postingArrayList.add(posting);
                 }
 
@@ -133,7 +135,9 @@ public class HomeActivity extends AppCompatActivity implements PostingAdapter.Da
                 startActivity(new Intent(getApplicationContext(), PostingActivity.class));
                 return true;
             case R.id.notification:
-                startActivity(new Intent(getApplicationContext(), NotificationActivity.class));
+                Intent intent = new Intent(getApplicationContext(), NotificationActivity.class);
+                intent.putExtra("isAdmin", isAdmin);
+                startActivity(intent);
                 return true;
             case R.id.logout:
                 auth.signOut();
@@ -167,6 +171,7 @@ public class HomeActivity extends AppCompatActivity implements PostingAdapter.Da
         //send data via intent
         Intent intent = new Intent(getApplicationContext(), DetailPostingActivity.class);
         intent.putExtras(bundle);
+        intent.putExtra("isAdmin", isAdmin);
         startActivity(intent);
     }
 }

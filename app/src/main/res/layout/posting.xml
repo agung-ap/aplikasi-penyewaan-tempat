@@ -7,11 +7,7 @@
     android:layout_margin="8dp"
     android:foreground="?android:attr/selectableItemBackground"
     app:cardCornerRadius="4dp"
-    app:cardBackgroundColor="@color/md_yellow_100"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent">
+    app:cardBackgroundColor="@color/md_yellow_100">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,6 +17,7 @@
             android:id="@+id/gambar_tempat"
             android:layout_width="@dimen/margin_128"
             android:layout_height="@dimen/margin_128"
+            android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

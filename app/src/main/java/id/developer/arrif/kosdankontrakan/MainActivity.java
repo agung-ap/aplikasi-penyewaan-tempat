@@ -62,8 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 if (status.equals("admin")){
                     Log.i("tag", "info : " + status);
 
-                    Toast.makeText(getApplicationContext(), "Login Berhasil", Toast.LENGTH_SHORT).show();
-
                     Intent intent = new Intent(new Intent(getApplicationContext(), HomeActivity.class));
                     intent.putExtra("isAdmin", true);
                     startActivity(intent);
